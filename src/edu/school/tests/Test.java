@@ -2,8 +2,12 @@ package edu.school.tests;
 
 import java.awt.Color;
 
+import edu.school.models.SVGCircle;
 import edu.school.models.SVGLine;
 import edu.school.models.SVGPicture;
+import edu.school.models.SvgEllipse;
+import edu.school.models.SvgPolygon;
+import edu.school.models.SvgRectangle;
 
 public class Test {
 
@@ -12,10 +16,13 @@ public class Test {
 		// TODO Auto-generated method stub
 		SVGPicture pic = new SVGPicture();
 		pic.add(new SVGLine(10, 10, 180, 250, Color.red, 5));
-		pic.add(new SVGLine(280, 10, 0, 368, Color.blue, 1));
-		//pic.saveToFile("K:\\test2.svg");
+		pic.add(new SVGCircle(25, 75, 20, Color.blue, 5, Color.yellow));
+		pic.add(new SvgEllipse(75, 75, 20, 5, Color.green, 5, Color.yellow));
+		pic.add(new SvgRectangle(10, 10, 30, 30, Color.black, 5, Color.black));
+		pic.add(new SvgPolygon(Color.green, Color.black, 5, 50, 160, 55, 180, 70, 180, 60, 190, 65, 205, 50, 195, 35, 205, 40, 190, 30, 180, 45, 180));
+		pic.saveToFile("C:\\Users\\GRIGS\\Documents\\test.svg");
 		System.out.println(pic);
 	}
-
+ 
 
 }

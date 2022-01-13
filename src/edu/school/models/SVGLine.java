@@ -48,7 +48,6 @@ public class SVGLine extends SVGObject{
 	}
 
 
-	@Override
 	public String toSvgCode() {
 		String result = "<line ";
 		result += "x1=\""+getX()+"\" y1=\""+getY()+"\" ";
@@ -57,5 +56,5 @@ public class SVGLine extends SVGObject{
 		result += "stroke-width=\""+getStrokeWidth()+"\"/>";
 		return result;
 	}
-
-}
+	
+} 

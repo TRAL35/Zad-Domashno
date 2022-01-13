@@ -4,19 +4,27 @@ import java.awt.Color;
 
 public abstract class SVGObject {
 	private int x;
-	private int y;
-	private Color color;
 	
-	public SVGObject(int x, int y, Color color)
+	private int y;
+	
+	private Color color;
+
+	private int strokeWidth;
+
+	private Color fill;
+
+	public SVGObject(int x, int y, Color color, Color fill, int strokeWidth)
 	{
 		setX(x);
 		setY(y);
 		setColor(color);
+		setFill(fill);
+		setStrokeWidth(strokeWidth);
 	}
 	
 	public SVGObject(int x, int y)
 	{
-		this(x, y, Color.BLACK);
+		this(x, y, Color.BLACK, Color.BLUE, 5);
 	}
 	
 	public SVGObject()
@@ -24,6 +32,27 @@ public abstract class SVGObject {
 		this(0,0);
 	}
 
+    public SVGObject(Color strokeColor, int strokeWidth2, Color fill2) {
+	}
+
+	public SVGObject(int startX, int startY, Color strokeColor) {
+    }
+
+    public Color getFill(){
+        return fill;
+    }
+    public void setFill(Color fill){
+        this.fill = fill;
+    }
+
+	public int getStrokeWidth() {
+		return strokeWidth;
+	}
+
+
+	public void setStrokeWidth(int strokeWidth) {
+		this.strokeWidth = strokeWidth;
+	}
 	public int getX() {
 		return x;
 	}
