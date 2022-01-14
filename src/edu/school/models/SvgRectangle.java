@@ -34,9 +34,9 @@ public class SvgRectangle extends SVGObject {
 	}
     //svg rec
     public String toSvgCode() {
-		String result = "<rec ";
+		String result = "<rect ";
 		result += "x=\""+getX()+"\" y=\""+getY()+"\" ";
-		result += "width=\""+getWidth()+"\" hight=\""+getHight()+"\" ";
+		result += "width=\""+getWidth()+"\" height=\""+getHight()+"\" ";
 		result += "stroke=\""+toRGB(getColor())+"\" ";
         result += "fill =\""+toRGB(getColor())+"\" ";
 		result += "stroke-width=\""+getStrokeWidth()+"\"/>";

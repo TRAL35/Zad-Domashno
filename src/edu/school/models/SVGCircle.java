@@ -14,7 +14,7 @@ public class SVGCircle extends SVGObject{
         this.r = r;
     }
     // constr circle
-    public SVGCircle(int startX, int startY, int width, Color strokeColor, int strokeWidth, Color fill)
+    public SVGCircle(int startX, int startY, int r, Color strokeColor, int strokeWidth, Color fill)
 	{
 		super(startX, startY, strokeColor, fill, strokeWidth);
 		setR(r);
@@ -25,8 +25,8 @@ public class SVGCircle extends SVGObject{
     //svg circle
     public String toSvgCode() {
 		String result = "<circle ";
-		result += "x=\""+getX()+"\" y=\""+getY()+"\" ";
-		result += "R=\""+getR()+"\" ";
+		result += "cx=\""+getX()+"\" cy=\""+getY()+"\" ";
+		result += "r=\""+getR()+"\" ";
 		result += "stroke=\""+toRGB(getColor())+"\" ";
         result += "fill =\""+toRGB(getColor())+"\" ";
 		result += "stroke-width=\""+getStrokeWidth()+"\"/>";

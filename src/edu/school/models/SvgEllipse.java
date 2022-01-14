@@ -23,17 +23,15 @@ public class SvgEllipse extends SVGObject{
         this.ry = ry;
     }
     // constr ellipse
-    public SvgEllipse(int startX, int startY, int width, int hight,
-			Color strokeColor, int strokeWidth, Color fill)
-	{
+    public SvgEllipse(int startX, int startY, int rx, int ry,Color strokeColor, int strokeWidth, Color fill){
 		super(startX, startY, strokeColor, fill, strokeWidth);
 		setRx(rx);
 		setRy(ry);
 	}
     //svg ellipse
     public String toSvgCode() {
-		String result = "<circle ";
-		result += "x=\""+getX()+"\" y=\""+getY()+"\" ";
+		String result = "<ellipse ";
+		result += "cx=\""+getX()+"\" cy=\""+getY()+"\" ";
 		result += "rx=\""+getRx()+"\" ry=\""+getRy()+"\" ";
 		result += "stroke=\""+toRGB(getColor())+"\" ";
         result += "fill =\""+toRGB(getColor())+"\" ";

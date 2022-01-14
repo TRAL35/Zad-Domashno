@@ -33,10 +33,17 @@ public abstract class SVGObject {
 	}
 
     public SVGObject(Color strokeColor, int strokeWidth2, Color fill2) {
+		setColor(color);
+		setFill(fill2);
+		setStrokeWidth(strokeWidth2);
 	}
 
-	public SVGObject(int startX, int startY, Color strokeColor) {
-    }
+	public SVGObject(int startX, int startY, Color strokeColor, int strokeWidth3) {
+		setX(startX);
+		setY(startY);
+		setColor(strokeColor);
+		setStrokeWidth(strokeWidth3);
+	}
 
     public Color getFill(){
         return fill;

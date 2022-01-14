@@ -16,12 +16,12 @@ public class Test {
 		// TODO Auto-generated method stub
 		SVGPicture pic = new SVGPicture();
 		pic.add(new SVGLine(10, 10, 180, 250, Color.red, 5));
-		pic.add(new SVGCircle(25, 75, 20, Color.blue, 5, Color.yellow));
-		pic.add(new SvgEllipse(75, 75, 20, 5, Color.green, 5, Color.yellow));
-		pic.add(new SvgRectangle(10, 10, 30, 30, Color.black, 5, Color.black));
+		pic.add(new SVGCircle(100, 75, 20, Color.blue, 5, Color.yellow));
+		pic.add(new SvgEllipse(150, 150, 200, 5, Color.green, 5, Color.black));
+		pic.add(new SvgRectangle(200, 10, 40, 40, Color.red, 5, Color.black));
 		pic.add(new SvgPolygon(Color.green, Color.black, 5, 50, 160, 55, 180, 70, 180, 60, 190, 65, 205, 50, 195, 35, 205, 40, 190, 30, 180, 45, 180));
 		pic.saveToFile("C:\\Users\\GRIGS\\Documents\\test.svg");
-		System.out.println(pic);
+		//System.out.println(pic);
 	}
  
 

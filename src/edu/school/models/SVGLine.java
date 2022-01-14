@@ -6,15 +6,15 @@ public class SVGLine extends SVGObject{
 
 	private int endX;
 	private int endY;
-	private int strokeWidth;
+	
 	
 	public SVGLine(int startX, int startY, int endX, int endY,
 			Color strokeColor, int strokeWidth)
 	{
-		super(startX, startY, strokeColor);
+		super(startX, startY, strokeColor, strokeWidth);
 		setEndX(endX);
 		setEndY(endY);
-		setStrokeWidth(strokeWidth);
+		
 	}
 	
 	
@@ -35,16 +35,6 @@ public class SVGLine extends SVGObject{
 
 	public void setEndY(int endY) {
 		this.endY = endY;
-	}
-
-
-	public int getStrokeWidth() {
-		return strokeWidth;
-	}
-
-
-	public void setStrokeWidth(int strokeWidth) {
-		this.strokeWidth = strokeWidth;
 	}
 
 

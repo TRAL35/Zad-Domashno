@@ -12,7 +12,7 @@ public class SvgPolygon extends SVGObject{
         }
         this.points = points;
     }
-    public SvgPolygon(Color strokeColor, Color fill, int strokeWidth, int... point){
+    public SvgPolygon(Color strokeColor, Color fill, int strokeWidth, int... points){
         super(strokeColor, strokeWidth, fill);
         setPoints(points); 
     }
